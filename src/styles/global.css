@@ -1,0 +1,10 @@
+@keyframes siteLoader {
+    100% {
+        transform: translateY(-300vh);
+    }
+  }
+  .loader-container{
+    margin-top: 0vh; /* bring loader into viewport */
+    animation: siteLoader 1500ms forwards cubic-bezier(0.950, 0.050, 0.795, 0.035); /* animation properties of loader leaving viewport */
+    animation-delay: 5000ms; /* time until the animation of the loader leaving viewport starts */
+  }
