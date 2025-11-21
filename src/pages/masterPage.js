@@ -1,7 +1,7 @@
+import wixLocation from 'wix-location';
+
 $w.onReady(() => {
-  if (typeof window !== 'undefined') {
-    window.addEventListener('popstate', () => {
-      window.parent.postMessage({ url: window.location.href }, '*');
-    });
-  }
+  wixLocation.onChange((location) => {
+    window.parent.postMessage({ url: location.url }, "*");
+  });
 });
